@@ -34,7 +34,7 @@
             const chatBox = document.getElementById("chat-box");
 
             // Display user message in the chat box
-            chatBox.innerHTML += <p><strong>You:</strong> ${userInput}</p>;
+            chatBox.innerHTML += `<p><strong>You:</strong> ${userInput}</p>`;
 
             document.getElementById("user-input").value = "";
 
@@ -48,12 +48,12 @@
                 const data = await response.json();
                 
                 // Display chatbot response
-                chatBox.innerHTML += <p><strong>Bot:</strong> ${data.response}</p>;
+                chatBox.innerHTML += `<p><strong>Bot:</strong> ${data.response}</p>`;
                 
                 // Scroll to the bottom of the chat box
                 chatBox.scrollTop = chatBox.scrollHeight;
             } catch (error) {
-                chatBox.innerHTML += <p><strong>Bot:</strong> Error connecting to server.</p>;
+                chatBox.innerHTML += `<p><strong>Bot:</strong> Error connecting to server.</p>`;
             }
         }
     </script>
